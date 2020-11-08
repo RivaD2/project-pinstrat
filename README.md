@@ -4,6 +4,10 @@
 
 TODO
 
+#### Overview UML:
+
+![UML](https://raw.githubusercontent.com/401-Midterm/pinstrat/main/midtem%20UML%201.jpg)
+
 ### Testing:
 
 TODO
