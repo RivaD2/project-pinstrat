@@ -1,6 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
-
+// const GameModel = require('./lib/models/mass-effect-model')
+// const GameSchema = 
 class Collections {
    
     constructor(modelName,schema) {
