@@ -4,8 +4,9 @@
   "description": "### About Project PinStrat:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "jest --verbose --coverage",
+    "watch": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
