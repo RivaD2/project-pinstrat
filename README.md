@@ -36,7 +36,53 @@ TODO:
 
 #### Usability
 
-#### Env Requirements
+**You will need to install the following on your machine:**
+
+    - `npm init -y `
+    - **The entry point for this app is: `index.js`**
+    - `npm install` for the following:
+        - `egoroof-blowfish`
+        - `dotenv`
+        - `cors`
+        -  `express`
+        -  'jest'
+- Install MongoDB: `npm install mongodb`
+- Install mongoose: `npm install -save--dev mongoose`
+- Visit [docs.mongodb.com](https://docs.mongodb.com/manual/tutorial/getting-started/) to learn How to get started using MongoDB.
+
+- Start server:
+
+```
+
+    /* give it a port number and optionally pass a function to call when app
+     starts listening on given port*/
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}`));
+
+```
+
+
+- Connect to your db:
+
+```
+
+//Connect to Database
+mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true, useUnifiedTopology: true})
+    .then(() => console.log('Connected to MongoDB...'))
+    .catch(err => console.error('Could not connect to MongoDB...',err));
+
+```
+
+#### env Requirements:
+
+```
+PORT=3001
+MONGODB_URI=(add db URI here)
+
+
+```
+
 
 #### Overview UML:
 
