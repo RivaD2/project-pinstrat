@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const GameModel = require('./lib/models/mass-effect-model')
 
-class Collections {
+class GameCollection {
     constructor() {
         console.log('in Collections class', GameModel);
         this.model = GameModel;
@@ -17,8 +17,7 @@ class Collections {
     }
     async read(id) {
         console.log('in read', id);
-        //{_id:new mongoose.Types.ObjectId(id)})
-        const oneEntry = await this.model.find({_id: id});
+        const oneEntry = await this.model.find({_id:new mongoose.Types.ObjectId(id)});
         console.log('returning an entry', oneEntry);
         return oneEntry[0];
     }
@@ -49,4 +48,4 @@ class Collections {
    }
 }
 
-module.exports = Collections;
+module.exports = GameCollection;
