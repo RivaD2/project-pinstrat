@@ -17,6 +17,7 @@ class Collections {
     }
     async read(id) {
         console.log('in read', id);
+        //{_id:new mongoose.Types.ObjectId(id)})
         const oneEntry = await this.model.find({_id: id});
         console.log('returning an entry', oneEntry);
         return oneEntry[0];
