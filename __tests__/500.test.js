@@ -14,5 +14,4 @@ describe('We are testing our 500 error message', () => {
     expect(fivehundred).toHaveLength(4);
 
   });
-
 });
