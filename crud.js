@@ -17,7 +17,8 @@ class GameCollection {
     }
     async read(id) {
         console.log('in read', id);
-        const oneEntry = await this.model.find({_id:new mongoose.Types.ObjectId(id)});
+        //const oneEntry = await this.model.find({_id:new mongoose.Types.ObjectId(id)});
+        const oneEntry = await this.model.find({ gameId:id });
         console.log('returning an entry', oneEntry);
         return oneEntry[0];
     }
