@@ -1,21 +1,25 @@
 'use strict';
 const mongoose = require('mongoose');
+const GameModel = require('./lib/models/mass-effect-model')
 
 class Collections {
-   
-    constructor(modelName,schema) {
-        this.model = mongoose.model(modelName, schema);
+    constructor() {
+        console.log('in Collections class', GameModel);
+        this.model = GameModel;
     }
     //create() method is different for each model as schema is slightly different
     //read() performs a find()
     async create(object) {
+        console.log('creating object', object);
         let newEntry = new this.model(object);
+        console.log('new Entry in create route', newEntry)
         return await newEntry.save();
-
-
     }
     async read(id) {
+        console.log('in read', id);
+        //{_id:new mongoose.Types.ObjectId(id)})
         const oneEntry = await this.model.find({_id: id});
+        console.log('returning an entry', oneEntry);
         return oneEntry[0];
     }
 

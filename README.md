@@ -44,8 +44,10 @@ TODO:
         - `egoroof-blowfish`
         - `dotenv`
         - `cors`
-        -  `express`
-        -  'jest'
+        - `express`
+        - 'jest'
+        - cli-spinner
+        - chalk
 - Install MongoDB: `npm install mongodb`
 - Install mongoose: `npm install -save--dev mongoose`
 - Visit [docs.mongodb.com](https://docs.mongodb.com/manual/tutorial/getting-started/) to learn How to get started using MongoDB.
