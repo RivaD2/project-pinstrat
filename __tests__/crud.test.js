@@ -75,4 +75,22 @@ describe('/DELETE', () => {
                 expect(res.body).toEqual('');
                 expect(res.status).toBe(202);
     });
+
+      //////////
+
+  it('should return an error',() => {
+    return testServer.get('/ncjdjkds')
+      .then(res => {
+        expect(res.status).toBe(404);
+      })
+  })
+
+  ////////
+
+  it('should return an error',() => {
+    return testServer.get('/games/none')
+      .then(res => {
+        expect(res.status).toBe(500);
+      })
+  })
 });
