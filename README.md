@@ -51,6 +51,7 @@ TODO:
         - chalk
         - @code-fellows/supergoose
         - supertest
+        - crypto
 
 - Install MongoDB: `npm install mongodb`
 - Install mongoose: `npm install -save--dev mongoose`
