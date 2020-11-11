@@ -2,77 +2,76 @@
 const supergoose = require('@code-fellows/supergoose');
 const server = require('../lib/server');
 const testServer = supergoose(server.app);
-
+const GameCollection = require('../crud')
 //Create unit tests for your middleware
 //Every route should respond with the right status code and the expected data
 //CRUD tests for your collection classes
-let GameCollection;
+let collectionInstance;
 const createGame = async () => {
-    const createdGame = await GameCollection.create(game);
+    const createdGame = await collectionInstance.create(game);
     game.id = createdGame.id;
 }
 //before test runs, I have to add item to the DB
-let Game = {
-    
+let game = 
+{
+    "gameId": "13",
+    "gameRev": "0",
+    "name": "Mass Effect 2",
+    "fontFamily": "me123",
+    "overview": {
+        "intro": "Entire human colonies are disappearing without a trace.\n\nYou are Commander Shepard.",
+        "summaries": [
+            {
+                "name": "Recruit a Squad",
+                "description": "In order to survive the mission through the Omega 4 Relay, you're going to need a team of the best soldiers, scientists, and mercenaries in the galaxy.\n\nYou start the game with two squadmates: Jacob and Miranda. Five recruitment missions are unlockable from the beginning of the game—hit any lane 3x to enable the mission for that squadmate. After you complete the mission, they will join your team and a new squadmate can be unlocked from the same lane.",
+                "priority": 2
+            },
+        ]
+    }
 }
 describe('/GET', () => {
     beforeAll(async () => {
-        GameCollection = new GameCollection();
+        collectionInstance = new GameCollection();
         await createGame();
     })
-    beforeEach(() => {
-    })
     it('should return all game data', async () => {
-        await testServer.get('/:model')
-            .then(res => {
-                expect(res.body.length).toEqual(1);
-                expect(res.body[0].name).toEqual(game.name);
-                expect(res.status).toBe(200);
-            })
+        const res = await testServer.get('/games')
+        expect(res.body[0].name).toBe(game.name);
+        expect(res.status).toBe(200);
     });
     it('should get one game', async () => {
-        await testServer.get('/:model/:id' + game.id)
-            .then(res => {
+            const res = await testServer.get('/games/' + game.gameId)
                 expect(res.body.name).toBe(game.name);
-                expect(res.status).toEqual(200);
-            })
-    });
-   
+                expect(res.status).toEqual(200)
+    })
 });
+
 describe('/PUT', () => {
     beforeAll(async () => {
         // supergoose.startDB();
-        GameCollection = new GameCollection();
+        collectionInstance = new GameCollection();
         await createGame();
     })
-    beforeEach(() => {
-    })
     it('should update a game', async () => {
-        await testServer.put('/:model/:id' + game.id).send({
-                category: 'Canned Goods'
+        const res = await testServer.put('/game/' + game.gameId).send({
+            
+                name: "Fifth Element"
             })
-            .then(res => {
                 //express returns a null response as an empty object
-                expect(res.body.category).toBe('');
+                expect(res.body.name).toBe(game.name);
                 expect(res.status).toBe(200);
             })
     });
-
-});
     describe('/DELETE', () => {
         beforeAll(async () => {
             // supergoose.startDB();
-            GameCollection = new GameCollection();
+            collectionInstance = new GameCollection();
              await createGame();
     
         })
-        beforeEach(() => {
-        })
         it('should delete a game', async () => {
-            await testServer.delete('/:model/:id' + game.id)
-                .then(res => {
+            const res = await testServer.delete('/game/' + game.gameId)
                     expect(res.body).toEqual('');
                     expect(res.status).toBe(202);
-                })
         });
     });

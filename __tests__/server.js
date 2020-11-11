@@ -8,7 +8,7 @@ const testServer = supergoose(server.app);
 */
 describe('Testing the app', () => {
     it('should return some products',() =>  {
-        return testServer.get('/products')
+        return testServer.get('/games')
         .then(res => {
             expect(res.body).toMatchObject([]);
             expect(res.status).toBe(200);
