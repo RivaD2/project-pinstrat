@@ -24,6 +24,7 @@
     "chalk": "^4.1.0",
     "cli-spinner": "^0.2.10",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "egoroof-blowfish": "^2.2.2",
     "express": "^4.17.1",

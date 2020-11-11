@@ -10,16 +10,13 @@ class GameCollection {
     //create() method is different for each model as schema is slightly different
     //read() performs a find()
     async create(object) {
-        console.log('creating object', object);
         let newEntry = new this.model(object);
-        console.log('new Entry in create route', newEntry)
         return await newEntry.save();
     }
     async read(id) {
         console.log('in read', id);
         //const oneEntry = await this.model.find({_id:new mongoose.Types.ObjectId(id)});
         const oneEntry = await this.model.find({ gameId:id });
-        console.log('returning an entry', oneEntry);
         return oneEntry[0];
     }
 
@@ -38,7 +35,7 @@ class GameCollection {
       }
       // after we update the doc we want to save it
       await entry.save();
-      return entry
+      return entry;
    }
 
    async delete(id) {

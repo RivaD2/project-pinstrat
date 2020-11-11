@@ -3,7 +3,9 @@
 const mongoose = require('mongoose');
 
 const server = require('./lib/server');
-const debugLogger = require('./lib/debug/debug-logger');
+//commented this out as nodemon kept throwing errors it couldn't be found 
+//it doesn't look like we are using this as of now
+//const debugLogger = require('./lib/debug/debug-logger');
 
 server.start();
 // debugLogger(0),
