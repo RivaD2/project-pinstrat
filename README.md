@@ -40,18 +40,22 @@ TODO:
 
     - `npm init -y `
     - **The entry point for this app is: `index.js`**
-    - `npm install` for the following:
+    - `npm i` for the following:
        
-        - `egoroof-blowfish`
-        - `dotenv`
-        - `cors`
-        - `express`
-        - 'jest'
-        - cli-spinner
-        - chalk
-        - @code-fellows/supergoose
-        - supertest
-        - crypto
+        "@code-fellows/supergoose": "^1.0.11",
+        "chalk": "^4.1.0",
+        "cli-spinner": "^0.2.10",
+        "cors": "^2.8.5",
+        "crypto": "^1.0.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "jest": "^26.6.3",
+        "mongodb": "^3.6.3",
+        "mongoose": "^5.10.13",
+        "node-mocks-http": "^1.9.0",
+        "nodemon": "^2.0.6",
+        "superagent": "^6.1.0",
+        "supertest": "^6.0.1"
 
 - Install MongoDB: `npm install mongodb`
 - Install mongoose: `npm install -save--dev mongoose`
