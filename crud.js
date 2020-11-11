@@ -35,7 +35,7 @@ class GameCollection {
       }
       // after we update the doc we want to save it
       await entry.save();
-      return entry
+      return entry;
    }
 
    async delete(id) {
