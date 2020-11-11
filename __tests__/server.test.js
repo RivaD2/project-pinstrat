@@ -7,11 +7,13 @@ const testServer = supergoose(server.app);
 - Use the supergoose testing library
 */
 describe('Testing the app', () => {
-    it('should return a game',() =>  {
-        return testServer.get('/games')
+
+  it('should return a game', () => {
+    setTimeout(() => {
+      return testServer.get('/games')
         .then(res => {
-            expect(res.body).toMatchObject([]);
-            expect(res.status).toBe(200);
-        })
-    })
+          expect(res.body).toMatchObject([]);
+          expect(res.status).toBe(200);
+        }, 1000)})
+  })
 });
