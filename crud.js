@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const GameModel = require('./lib/models/mass-effect-model')
 
-class Collections {
+class GameCollection {
     constructor() {
         console.log('in Collections class', GameModel);
         this.model = GameModel;
@@ -10,16 +10,13 @@ class Collections {
     //create() method is different for each model as schema is slightly different
     //read() performs a find()
     async create(object) {
-        console.log('creating object', object);
         let newEntry = new this.model(object);
-        console.log('new Entry in create route', newEntry)
         return await newEntry.save();
     }
     async read(id) {
         console.log('in read', id);
-        //{_id:new mongoose.Types.ObjectId(id)})
-        const oneEntry = await this.model.find({_id: id});
-        console.log('returning an entry', oneEntry);
+        //const oneEntry = await this.model.find({_id:new mongoose.Types.ObjectId(id)});
+        const oneEntry = await this.model.find({ gameId:id });
         return oneEntry[0];
     }
 
@@ -38,7 +35,7 @@ class Collections {
       }
       // after we update the doc we want to save it
       await entry.save();
-      return entry
+      return entry;
    }
 
    async delete(id) {
@@ -49,4 +46,4 @@ class Collections {
    }
 }
 
-module.exports = Collections;
+module.exports = GameCollection;

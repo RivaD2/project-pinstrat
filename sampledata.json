@@ -1,0 +1,804 @@
+{
+	"gameId": "12",
+	"gameRev": "0",
+	"name": "Mass Effect 2",
+	"fontFamily": "me123",
+	"overview": {
+		"intro": "Entire human colonies are disappearing without a trace.\n\nYou are Commander Shepard.",
+		"summaries": [
+			{
+				"name": "Recruit a Squad",
+				"description": "In order to survive the mission through the Omega 4 Relay, you're going to need a team of the best soldiers, scientists, and mercenaries in the galaxy.\n\nYou start the game with two squadmates: Jacob and Miranda. Five recruitment missions are unlockable from the beginning of the game—hit any lane 3x to enable the mission for that squadmate. After you complete the mission, they will join your team and a new squadmate can be unlocked from the same lane.",
+				"priority": 2
+			},
+			{
+				"name": "Stop the Collectors",
+				"description": "Human colonies have been disappearing, hundreds of thousands of people vanishing without a trace. Intel suggests that a mysterious race known only as the Collectors are behind the attack. Very little is known about the Collectors, as they operate in rare strikes from their home beyond the Omega 4 Relay. No ship that has attempted that journey has ever returned.\n\nAs you build your team, opportunites will arise to face the Collectors head-on. These missions are automatically enabled at the mission select screen once available.\n\nFirst, infiltrate the Disabled Collector Vessel to find information about this mysterious enemy and the Omega 4 Relay.\n\nThen, fight your way to the heart of a Derelict Reaper to find the IFF beacon to get you safely through the relay.\n\nFinally, integrate the IFF into the Normandy's systems and take the fight to the Collector Base deep in the galactic core.",
+				"priority": 3
+			},
+			{
+				"name": "Multiballs",
+				"description": "Project Overlord is available from the start of the game and tasks Shepard with infiltration a research station that has been overtaken by a hostile geth force under the control of a rampant VI. Break the lockdown at each of the station's outposts and destroy the VI before it can upload it's destructive virus across the galaxy.\n\nArrival is available after the Collector Ship mission and finds Shepard racing against the clock to prevent the beachhead invasion force of the unstoppale Reapers.\n\nBoth multiballs can be lit at the right target bank and locked via the airlock lane. Lock three balls to begin the multiball. In a new game, Overlord can be lit by hitting either target. Once played, both targets must be hit to re-light lock.",
+				"priority": 10
+			}
+		]
+	},
+	"modes": [
+		{
+			"key": "12",
+			"name": "Recruit Garrus",
+			"summary": "Archangel is under attack! The mercenary Blood Pack have blasted their way into the garage and Shepard must seal off the garage shutters to stop their advance, then return to Garrus and defend his position.",
+			"description": "Three lanes are lit, one for each shutter. Hit all three lanes to close the shutters and light the stairs (left ramp). Hit the stairs to complete the mission.",
+			"resume": "Progress is saved after all shutters are closed.",
+			"timeLimitSecs": 40,
+			"image": "ga_default.png",
+			"color": "0055FF",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the left ramp 3X during open play to unlock Garrus' recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Garrus' to play this mission."
+				},
+				"2": {
+					"name": "No Shutters Closed",
+					"instructions": "You didn't get any of the shutters closed this time."
+				},
+				"3": {
+					"name": "1 of 3 Shutters Closed",
+					"instructions": "You closed one shutter. Two more to go!"
+				},
+				"4": {
+					"name": "2 of 3 Shutters Closed",
+					"instructions": "You closed two shutters, one more to light the final shot!"
+				},
+				"5": {
+					"name": "All Shutters Closed",
+					"instructions": "You closed all the shutters, but didn't get the final ramp shot."
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "Congratulations! You recruited Garrus to your squad!"
+				}
+			}
+		},
+		{
+			"key": "10",
+			"name": "Recruit Grunt",
+			"summary": "You've landed in search of Warlord Okeer, but are facing an army of cloned Krogan bezerkers. Defeat the rush of Krogan to rescue Okeer and his research.",
+			"description": "All lanes are lit, each hit resets the timer. Finish all shots to complete the mission.",
+			"resume": true,
+			"timeLimitSecs": 20,
+			"image": "gr_default.png",
+			"color": "FF6611",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the left orbit 3X during open play to unlock Grunt's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Grunt' to play this mission."
+				},
+				"2": {
+					"name": "No Krogan Killed",
+					"instructions": "You didn't get any of the Krogan this time."
+				},
+				"3": {
+					"name": "1 of 5 Krogan Killed",
+					"instructions": "You hit one lane shot. Four more to go!"
+				},
+				"4": {
+					"name": "2 of 5 Krogan Killed",
+					"instructions": "You hit two lane shots. Three more to go!"
+				},
+				"5": {
+					"name": "3 of 5 Krogan Killed",
+					"instructions": "You hit three lane shots. Two more to go!"
+				},
+				"6": {
+					"name": "4 of 5 Krogan Killed",
+					"instructions": "You hit four lane shots. Only one left!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "Congratulations! Grunt has joined your squad!"
+				}
+			}
+		},
+		{
+			"key": "11",
+			"name": "Recruit Jack",
+			"summary": "The warden has betrayed Shepard and sent squads to capture her. Fight your way through the prison and defeat the warden to escape with Jack.",
+			"description": "Each round lights lane shots: hit any lane to light the right bank and hit the bank to complete the round. Finish 3 rounds to complete the mode.",
+			"resume": "Progress is saved after each round.",
+			"timeLimitSecs": 40,
+			"image": "ja_default.png",
+			"color": "4D00CC",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the left inner loop 3X during open play to unlock Jack's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Jack' to play this mission."
+				},
+				"2": {
+					"name": "No Escape",
+					"instructions": "You didn't complete any rounds against the warden."
+				},
+				"3": {
+					"name": "1 of 3 Rounds",
+					"instructions": "You completed one round. Two more to go!"
+				},
+				"4": {
+					"name": "2 of 3 Rounds",
+					"instructions": "You completed two rounds. Just one more!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "Congratulations! You escaped the prison and Jack joined your squad."
+				}
+			}
+		},
+		{
+			"key": "13",
+			"name": "Recruit Kasumi",
+			"summary": "To break into the vault with Kasumi, you need a voice print, a DNA sample, and a password.",
+			"description": "Each lit lane contains one piece of the puzzle, collect all four to enter the vault. WARNING: Red lanes are alarmed and if you trip three times, the mission ends.",
+			"resume": true,
+			"timeLimitSecs": 40,
+			"image": "ka_default.png",
+			"color": "EEFF00",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the right ramp 3X during open play to unlock Kasumi's mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Kasumi' to play this mission."
+				},
+				"2": {
+					"name": "No Luck",
+					"instructions": "You didn't get anything you needed to break into the vault."
+				},
+				"3": {
+					"name": "Password Obtained",
+					"instructions": "You got the password, but still need more."
+				},
+				"4": {
+					"name": "Voiceprint Recorded",
+					"instructions": "You were able to synthesize a voiceprint of the password. Halfway there!"
+				},
+				"5": {
+					"name": "DNA Sample Obtained",
+					"instructions": "You found all the pieces to break the vault security. You were just one shot away!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "You successfully entered the vault to retrieve the stolen memories, and Kasumi joined your squad!"
+				}
+			}
+		},
+		{
+			"key": "14",
+			"name": "Recruit Mordin",
+			"summary": "Vorcha have shut down the ventilation in plague-ridden Omega. Insert the cure into the air supply and turn on the fans to stop the disease.",
+			"description": "The left orbit is lit first, then the right to insert the cure. Once completed, hit both ramps (in any order) to turn on the fans.",
+			"resume": "Progress is saved after the cure is in.",
+			"timeLimitSecs": 40,
+			"color": "AA0000",
+			"image": "mo_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the right orbit 3X during open play to unlock Mordin's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Mordin' to play this mission."
+				},
+				"2": {
+					"name": "No Cure",
+					"instructions": "You didn't get the cure into the system."
+				},
+				"3": {
+					"name": "Cure Placed",
+					"instructions": "You got the cure in place, but didn't turn on the fans."
+				},
+				"4": {
+					"name": "1 Fan Activated",
+					"instructions": "You placed the cure and turned on one fan, but didn't get the second fan in time."
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "Congratulations! The plague was cured and Mordin joined your squad."
+				}
+			}
+		},
+		{
+			"key": "15",
+			"name": "Recruit Zaeed",
+			"summary": "The Blue Suns mercenaries, led by Zaeed's former partner Vito, have taken hostages at an oil refinery. Storm the refinery and choose between saving the hostages or stopping Vito.",
+			"description": "Choose left orbit for paragon to save the hostages, or right orbit for renegade to chase Vito. Hit 3X orbit shots to light the airlock shot. Additional orbits build more value, hit the airlock to complete.",
+			"resume": "Your choice of path is saved.",
+			"timeLimitSecs": 60,
+			"color": "ff7700",
+			"image": "za_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the left orbit 3X during open play to unlock Zaeed's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Zaeed' to play this mission."
+				},
+				"2": {
+					"name": "No path",
+					"instructions": "You didn't choose a path"
+				},
+				"3": {
+					"name": "Paragon Chosen",
+					"instructions": "You chose to rescue the workers, but did not complete the mission."
+				},
+				"4": {
+					"name": "Renegade Chosen",
+					"instructions": "You chose to pursue Vito, but did not catch him in time."
+				},
+				"8": {
+					"name": "Completed (Paragon)",
+					"instructions": "You saved the factory workers, but let Vito escape. Zaeed has joined your squad."
+				},
+				"9": {
+					"name": "Completed (Renegade)",
+					"instructions": "You stopped Vito in his tracks. Zaeed got his revenge, and is now a member of your squad."
+				}
+			}
+		},
+		{
+			"key": "16",
+			"name": "Recruit Legion",
+			"summary": "Divisions within the Geth intelligence have caused a split between those who want to work with organic life and those who want to destroy it. Legion has a plan to end the internal strife, but needs time to hack the central console. Defend your position from waves of Geth until the hack completes.",
+			"description": "Shots light randomly. Each lit shot has a hurryup timer that accumulates the hack progress. As the timer runs down, the shot will move downfield: starting at a lane shot, then a target, then a bank. When one or both banks are lit, hack progress is stopped until all banks are cleared.",
+			"timeLimitSecs": 60,
+			"resume": false,
+			"color": "ffffff",
+			"image": "le_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the airlock lane 3X during open play to unlock Legion's loyalty mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Legion' to play this mission."
+				},
+				"2": {
+					"name": "No Hack Progress",
+					"instructions": "You were unable to hack into the console."
+				},
+				"3": {
+					"name": "Hack Started",
+					"instructions": "You started hacking the console, but were unable to complete in time."
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "Congratulations! The plague was cured and Mordin joined your squad."
+				}
+			}
+		},
+		{
+			"key": "17",
+			"name": "Recruit Tali",
+			"summary": "A Geth incursion on Haestrom threatens the Quarian research team. Tali has barricaded herself in the observatory, but a Geth Colossus is blocking your path to her. Destroy the Colussus to rescue Tali.",
+			"description": "Hit the ramp to attack the Colossus, which starts a countdown timer. Keep hitting the ramp to damage the Colossus and reset the timer. If the timer counts down, the Colossus will repair itself. Six hits will destroy the Colossus and win the mode.",
+			"timeLimitSecs": 40,
+			"resume": true,
+			"color": "ff11dd",
+			"image": "ta_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the right orbit 3X during open play to unlock Tali's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Tali' to play this mission."
+				},
+				"2": {
+					"name": "No Damage",
+					"instructions": "You were unable to damage the Colossus."
+				},
+				"3": {
+					"name": "Damaged 1X",
+					"instructions": "You hit the Colossus once, but did not break its shields."
+				},
+				"4": {
+					"name": "Damaged 2X",
+					"instructions": "You hit the Colossus twice, wearing down its shields."
+				},
+				"5": {
+					"name": "Damaged 3X",
+					"instructions": "You hit the Colossus three times, destroying its shields."
+				},
+				"6": {
+					"name": "Damaged 4X",
+					"instructions": "You hit the Colossus four times, wearing down its armor."
+				},
+				"7": {
+					"name": "Damaged 5X",
+					"instructions": "You hit the Colossus five times, nearly destroying it. Only one more hit!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "You destroyed the Colossus and saved Tali from the Geth strike force. She has joined your squad."
+				}
+			}
+		},
+		{
+			"key": "18",
+			"name": "Recruit Samara",
+			"summary": "Eclipse mercenaries have information Samara needs to track a deadly assassin and avoid arrest. You are pursuing the mercenaries on her behalf, and come face-to-face with an armored gunship. Destroy the gunship to help Samara on her quest.",
+			"description": "Hit targets to weaken the gunship's armor and light lanes. Hit lanes to damage gunship. Five direct hits will destroy the ship and complete the mission.",
+			"resume": true,
+			"timeLimitSecs": 40,
+			"color": "008899",
+			"image": "sa_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the right orbit 3X during open play to unlock Tali's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Tali' to play this mission."
+				},
+				"2": {
+					"name": "No Damage",
+					"instructions": "You were unable to damage the gunship."
+				},
+				"3": {
+					"name": "Damaged 20%",
+					"instructions": "You hit the gunship once. It takes five shots to destroy."
+				},
+				"4": {
+					"name": "Damaged 40%",
+					"instructions": "You hit the gunship twice."
+				},
+				"5": {
+					"name": "Damaged 60%",
+					"instructions": "You hit the gunship three times."
+				},
+				"6": {
+					"name": "Damaged 80%",
+					"instructions": "You hit the gunship four times. You almost got it!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "You destroyed the gunship and found the information Samara needed. She has joined your squad!"
+				}
+			}
+		},
+		{
+			"key": "19",
+			"name": "Recruit Thane",
+			"summary": "The assassin Thane is on his way up Dantius Towers to assassinate criminal mastermind Nassana Dantius. This is your chance to find him... but you'll have to fight your way through Nassana's mercenaries first!",
+			"description": "Hit either ramp to ascend the towers, floor by floor. When you've climbed high enough, orbits will light. Keep climbing to build more value, and hit either orbit to complete the mode.",
+			"timeLimitSecs": 40,
+			"resume": true,
+			"color": "00ff11",
+			"image": "th_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Unlocked",
+					"instructions": "Hit the right ramp 3X during open play to unlock Thane's recruitment mission."
+				},
+				"1": {
+					"name": "Unlocked",
+					"instructions": "Shoot the left ramp to go to mission select, and choose 'Thane' to play this mission."
+				},
+				"2": {
+					"name": "No Progress",
+					"instructions": "You were unable to begin your ascent of the towers."
+				},
+				"3": {
+					"name": "Ascent Begun",
+					"instructions": "You started to make your way up the towers. 1 of 4 floors ascended."
+				},
+				"4": {
+					"name": "Ascent Halfway",
+					"instructions": "You battled halfway up the towers. 2 of 4 floors ascended."
+				},
+				"5": {
+					"name": "Ascent Near-Complete",
+					"instructions": "You ascended most of the towers. 3 of 4 floors reached."
+				},
+				"6": {
+					"name": "Bridge Reached",
+					"instructions": "You ascended the towers, but were unable to cross the bridge to Nassana's penthouse. So close!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "You met with Thane and he agreed to join your team for the mission."
+				}
+			}
+		},
+		{
+			"key": "50",
+			"category": "Multiball",
+			"name": "Project Overlord",
+			"summary": "A rogue VI has taken over the stations of Project Overlord and threatens to spread a virus across the fleet. Shut down the VI's links and stop the rampant geth.",
+			"description": "All lanes are lit, hit any one to light the jackpot at the right bank. After each jackpot, an additional lane shot is required to light the next jackpot. Hit three jackpots for a levelup.",
+			"color": "22FF33",
+			"image": "ov_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Attempted",
+					"instructions": "Hit the right bank to enable the lock, and lock balls via the left inner loop."
+				},
+				"1": {
+					"name": "1 Ball Locked",
+					"instructions": "You locked one ball. Hit the right bank and then the left inner loop to lock two more."
+				},
+				"2": {
+					"name": "2 Balls Locked",
+					"instructions": "You locked two balls. Just one more to go!"
+				},
+				"3": {
+					"name": "Attempted",
+					"instructions": "You played the multiball but didn't hit any jackpots."
+				},
+				"4": {
+					"name": "1 Jackpot Hit",
+					"instructions": "You collected one jackpot in the multiball. Two more for a levelup!"
+				},
+				"5": {
+					"name": "2 Jackpots Hit",
+					"instructions": "You collected two jackpots in the multiball. Just one more for the levelup!"
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "You successfully collected three jackpots and stopped the rogue VI."
+				}
+			}
+		},
+		{
+			"key": "60",
+			"category": "Lair of the Shadow Broker",
+			"name": "Collect Intel",
+			"summary": "Your former squadmate Liara has a lead on finding the elusive criminal boss known only as the Shadow Broker. Help her collect the intel she needs to track the Broker down.",
+			"description": "Complete the bank of drop targets to collect intel on the Shadow Broker. After collecting 3 intel, complete the drop bank one more time to start the Shadow Broker missions.",
+			"resume": true,
+			"color": "ff1f00",
+			"image": "sb_intel.png",
+			"statuses": {
+				"0": {
+					"name": "No Intel Collected",
+					"instructions": "Complete the drop targets to collect intel on the Shadow Broker."
+				},
+				"1": {
+					"name": "1/3 Intel Collected",
+					"instructions": "Complete the drop targets to collect intel on the Shadow Broker."
+				},
+				"2": {
+					"name": "2/3 Intel Collected",
+					"instructions": "Complete the drop targets to collect intel on the Shadow Broker."
+				},
+				"3": {
+					"name": "All Intel Collected",
+					"instructions": "Complete the drop targets one more time to begin the hunt for the Shadow Broker."
+				}
+			}
+		},
+		{
+			"key": "61",
+			"category": "Lair of the Shadow Broker",
+			"name": "Chase Vasir",
+			"summary": "Liara made contact with someone offering information on the Shadow Broker's location, but the contact was killed and his data drive stolen. Chase down the rogue Spectre agent Vasir and recover the data before it's too late.",
+			"description": "Follow the lit shots to pursue Vasir's skycar before the timer runs out. If she escapes, complete the drop bank again to retry.",
+			"timeLimitSecs": 40,
+			"resume": true,
+			"color": "ff1f00",
+			"image": "sb_chase.png",
+			"statuses": {
+				"0": {
+					"name": "No Pursuit",
+					"instructions": "You were unable to pursue Vasir at all. Complete the drop bank to try again."
+				},
+				"1": {
+					"name": "1/5 Pursuit Shots",
+					"instructions": "You made after Vasir but she slipped away quickly."
+				},
+				"2": {
+					"name": "2/5 Pursuit Shots",
+					"instructions": "You pursued Vasir briefly, but she got the slip on you."
+				},
+				"3": {
+					"name": "3/5 Pursuit Shots",
+					"instructions": "You gave Vasir a good chase, but she managed to lose you in dense traffic."
+				},
+				"4": {
+					"name": "4/5 Pursuit Shots",
+					"instructions": "You almost caught Vasir! One shot left, but she slipped away at the last second."
+				},
+				"5": {
+					"name": "Success",
+					"instructions": "You successfully pursued Vasir and forced her out of the sky."
+				}
+			}
+		},
+		{
+			"key": "62",
+			"category": "Lair of the Shadow Broker",
+			"name": "Battle with Vasir",
+			"summary": "You chased Vasir and crashed her skycar. Now, you and Liara must defeat her in combat to retrieve the data disc that can lead you to the Shadow Broker's hideout.",
+			"description": "Hit the lit shot to attack Vasir as she teleports around you. You must break her barrier and armor before you can finish her off.\n\nIf you fail, complete the drop bank to re-light the battle and shoot the ball lock to retry.",
+			"resume": false,
+			"color": "ff1f00",
+			"image": "sb_vasir.png",
+			"statuses": {
+				"0": {
+					"name": "Unsuccessful",
+					"instructions": "You were unable to attack Vasir, and she escaped with the data."
+				},
+				"1": {
+					"name": "Barrier Destroyed",
+					"instructions": "You took down Vasir's biotic barrier, but she still got the upper hand."
+				},
+				"2": {
+					"name": "Armor Destroyed",
+					"instructions": "You took down Vasir's biotic barrior and armor. You almost had her!"
+				},
+				"3": {
+					"name": "Vasir Eliminated",
+					"instructions": "You defeated Vasir and recovered the data disc."
+				}
+			}
+		},
+		{
+			"key": "63",
+			"category": "Lair of the Shadow Broker",
+			"name": "Tracking the Broker",
+			"summary": "With the recovered data, Liara is triangulating the position of the Shadow Broker's secret base. Complete the drop banks to gather the data needed to find the location.",
+			"description": "Gather more intel by completing drop banks. 3 completions are required to find the Shadow Broker.",
+			"resume": true,
+			"color": "ff1f00",
+			"image": "sb_pre_hagalaz.png",
+			"statuses": {
+				"0": {
+					"name": "No Intel Collected",
+					"instructions": "Complete the drop targets to find the Shadow Broker's location."
+				},
+				"1": {
+					"name": "1/3 Intel Collected",
+					"instructions": "Complete the drop targets to find the Shadow Broker's location."
+				},
+				"2": {
+					"name": "2/3 Intel Collected",
+					"instructions": "Complete the drop targets to find the Shadow Broker's location."
+				},
+				"3": {
+					"name": "Shadow Broker Located",
+					"instructions": "Complete the drop targets one more time to storm the Shadow Broker's base."
+				}
+			}
+		},
+		{
+			"key": "64",
+			"category": "Lair of the Shadow Broker",
+			"name": "Hagalaz",
+			"summary": "You've landed on the Shadow Broker's secret base and must fight your way inside. Defend your position against waves of the Broker's agents, while Liara's shunt progrem hacks into the ship. Watch out for lightning!",
+			"description": "Lanes light randomly and on a timer. Hit the lit lanes to hold your position while the hatch is hacked.\n\nListen for the charge! When the lightning capacitors are charged, hit any standup target to discharge the voltage and eliminate lit lanes on either side.",
+			"color": "ff1f00",
+			"resume": false,
+			"image": "sb_hagalaz.png",
+			"statuses": {
+				"0": {
+					"name": "No Progress",
+					"instructions": "You were unable to hold off any agents."
+				},
+				"1": {
+					"name": "20% Hacked",
+					"instructions": "You held off a few agents and hacked 20% of the hatch entrance lock."
+				},
+				"2": {
+					"name": "40% Hacked",
+					"instructions": "You held off a the agents and hacked 40% of the hatch entrance lock."
+				},
+				"3": {
+					"name": "60% Hacked",
+					"instructions": "You held off multiple waves and hacked 60% of the hatch entrance."
+				},
+				"4": {
+					"name": "80% Hacked",
+					"instructions": "You held off many waves and nearly got the hatch opened."
+				},
+				"5": {
+					"name": "Hack Complete",
+					"instructions": "You defeated the Broker's agents and bypassed the exterior lock, but didn't make it into the hatch. Complete the drop bank to light the next mission and shoot the lock to enter the base."
+				},
+				"6": {
+					"name": "Base Entered",
+					"instructions": "You successfully entered the base and fought your way to the central command room."
+				}
+			}
+		},
+		{
+			"key": "65",
+			"category": "Lair of the Shadow Broker",
+			"name": "The Shadow Broker",
+			"summary": "You and Liara have battled your way through and are now face-to-face with the Shadow Broker himself. Now, you must defeat him.",
+			"description": "Hit the lit lanes to attack the Shadow Broker. Wear down his shields, armor, and health to complete a round. 3 rounds to win.\n\nIf you fail, complete the drop bank to re-light and shoot the lock to retry.",
+			"resume": false,
+			"color": "ff1f00",
+			"image": "sb_boss.png",
+			"statuses": {
+				"0": {
+					"name": "No Progress",
+					"instructions": "You were unable to advance against the Shadow Broker."
+				},
+				"1": {
+					"name": "1 Round Complete",
+					"instructions": "You broke through his armor, but he activated a kinetic barrier. Time to do this the hard way."
+				},
+				"2": {
+					"name": "2 Rounds Complete",
+					"instructions": "You cannot penetrate the kinetic barrier, but Liara has an idea. Bring him down one more time!"
+				},
+				"3": {
+					"name": "Shadow Broker Defeated",
+					"instructions": "Together, you and Liara have defeated the Shadow Broker. Liara has assumed command of his forces and intelligence network, and will provide you with anything she can to help you in your cause."
+				}
+			}
+		},
+		{
+			"key": "70",
+			"name": "Disabled Collector Ship",
+			"category": "Stop the Collectors",
+			"summary": "Intel intercepts reveal that a Collector ship has been disabled in deep space. Taking your first and only opportunity to learn about how the Collectors navigate the Omega 4 Relay, you boarded the ship and found a console for EDI to gather intel from.\n\nBut it's a trap! Shepard's team is caught in an ambush and the Normandy is no match for the powerful Collector ship. Break the ambush and escape to the Normandy before it's too late!",
+			"description": "This multiball mode has three phases, which can cycle repeatedly as long as there are multiple balls in play. If the Praetorian (third phase) has been completed, the mode will end when the multiball drains to a single ball. If the Praetorian phase has not been completed, the mode will continue until the Praetorian is destroyed or the player's turn ends.",
+			"color": "ff2200",
+			"image": "cs_default.png",
+			"statuses": {
+				"0": {
+					"name": "Not Started",
+					"instructions": "Hit the left ramp to start the Mission Select and choose this mission."
+				},
+				"1": {
+					"name": "The Ambush (Phase 1)",
+					"instructions": "Each lane is lit with an ambushing Collector. Clear all lanes to escape the ambush. Each Collector destroyed will add-a-ball, up to 4 total balls."
+				},
+				"2": {
+					"name": "The Swarm (Phase 2)",
+					"instructions": "Survive the swarm of husks in this timed mode. Hit targets to weaken the husks' armor, and hit the lanes to obliterate them. This phase lasts 20 seconds."
+				},
+				"3": {
+					"name": "The Praetorian (Phase 3)",
+					"instructions": "Battle the behemoth Praetorian that blocks your escape. Two shots are lit on a timer, hit either one to damage the Praetorian and rotate the shots.\n\nWATCH OUT! If the timer expires, the Praetorian's beam gun will fire and you will lose a flipper! Hit the Praetorian again to restore flipper power.\n\nIf both flippers are lost in this way, you must retreat. The Husk phase will replay, and then you will have another chance to battle the Praetorian."
+				},
+				"9": {
+					"name": "Completed",
+					"instructions": "Amazing work! You successfully defeated the Praetorian and escaped to the Normandy with valuable intel on the Collector IFF system."
+				}
+			}
+		},
+		{
+			"key": "71",
+			"name": "Derelict Reaper",
+			"category": "Stop the Collectors",
+			"summary": "A Cerberus research team has discovered the remains of an ancient Reaper and was sent to retrieve the Identify-Friend-Foe module you need to safely travel through the Omega 4 Relay. The recovery team has gone silent. Board the derelict Reaper, fight off the hordes of husks, and recover the Reaper's IFF.",
+			"description": "Each lane is lit and must be completed to expose the Reaper's core. There is a timer: when it runs out, the lanes turn off. Hit the hitbank to re-light the lanes and restart the timer. Complete all lanes and hit the exposed core to complete the mission.",
+			"color": "ff2200",
+			"image": "dr_default.png",
+			"statuses": {
+				"0": {
+					"name": "No Progress",
+					"instructions": "You were unable to survive the onslaught of husks."
+				},
+				"1": {
+					"name": "1/5 Shots",
+					"instructions": "You defeated one wave of husks. Four more!"
+				},
+				"2": {
+					"name": "2/5 Shots",
+					"instructions": "You defeated two waves of husks. Three more!"
+				},
+				"3": {
+					"name": "3/5 Shots",
+					"instructions": "You defeated three waves of husks. Two more!"
+				},
+				"4": {
+					"name": "4/5 Shots",
+					"instructions": "You defeated four waves of husks. Only one more!"
+				},
+				"5": {
+					"name": "Core Exposed",
+					"instructions": "You successfully retrieved the Reaper IFF, but were unable to destroy the core."
+				},
+				"9": {
+					"name": "IFF Recovered",
+					"instructions": "You successfully retrieved the Reaper IFF and destroyed the core before escaping safely to the Normandy."
+				}
+			}
+		},
+		{
+			"key": "72",
+			"name": "the Normandy Attacked",
+			"summary": "A virus within the Reaper IFF has shut down the Normandy's systems and drawn the Collectors right to the ship. The Collectors have boarded and are abducting the crew, and time is running out. You must unshackle EDI's AI constraints so she can regain control of the ship. Be careful and watch out for Collectors!",
+			"description": "Follow the emergency lighting as EDI guides you through the bowels of the ship. Escape the bridge, restore power, unshackle EDI, and reboot the engines if you hope to survive.",
+			"color": "AA0000",
+			"image": "na_default.png",
+			"statuses": {
+				"0": {
+					"name": "Died on the Bridge",
+					"instructions": "You were unable to escape the bridge and Collectors captured you.\n\n(0/7 shots completed)"
+				},
+				"1": {
+					"name": "Died in the CIC",
+					"instructions": "You fled the bridge but were captured by Collectors on the command deck.\n\n(1/7 shots completed)"
+				},
+				"2": {
+					"name": "Died in the Medical Bay",
+					"instructions": "You were caught while sneaking through the medical bay.\n\n(2/7 shots completed)"
+				},
+				"3": {
+					"name": "Died at the AI Mainframe",
+					"instructions": "You were killed while attempting to unshackle EDI.\n\n(3/7 shots completed)"
+				},
+				"4": {
+					"name": "EDI Unshackled",
+					"instructions": "You successfully unshackled EDI, but were killed by Collectors shortly after.\n\n(4/7 shots completed)"
+				},
+				"5": {
+					"name": "Died on Engineering Deck",
+					"instructions": "You successfully unshackled EDI, but were killed attempting to get to the engine core.\n\n(5/7 shots completed)"
+				},
+				"6": {
+					"name": "Died at the Drive Core",
+					"instructions": "You successfully unshackled EDI, but were killed just before you were able to activate the drive core. You were so close!\n\n(6/7 shots completed)"
+				},
+				"9": {
+					"name": "Escaped!",
+					"instructions": "Against all odds, you successfully unshackled EDI and restarted the drive core. EDI vented the remaining Collectors and fled to safety."
+				}
+			}
+		},
+		{
+			"key": "80",
+			"name": "the Suicide Mission",
+			"summary": "Your squad is assembled. The IFF is installed. Your crew has been taken by the Collectors. Now, it's time to take the fight to them.\n\nOnce you begin the Suicide Mission, there is no turning back. Make sure your team is ready!",
+			"color": "ff2200",
+			"image": "sm_default.png",
+			"statuses": {
+				"0": {
+					"name": "Ready to Launch",
+					"instructions": "Launch the Suicide Mission from the mission select screen."
+				},
+				"1": {
+					"name": "Launched",
+					"instructions": "You have traveled through the Omega 4 Relay and now face the Collectors head-on in what could be a one-way journey for you and your squad."
+				}
+			}
+		},
+		{
+			"key": "81",
+			"name": "the Omega 4 Relay",
+			"category": "the Suicide Mission",
+			"summary": "Across the Omega 4 Relay, you slam headfirst into a field of debris—the remnants of centuries' worth of ships that didn't survive the journey.\n\nNow, under attack from the Collector forces, you must battle your way through the rubble and make your way to the Collector's base.",
+			"instructions": "All shots are lit as enemies and debris to clear. Complete all shots to safely navigate the field and earn an extra ball.\n\nHurry! The Collector ship is on its way, and when the timer runs out it's got you!",
+			"color": "ff2200",
+			"image": "sm_omega.png",
+			"statuses": {
+				"0": {
+					"name": "Crashed Immediately",
+					"instructions": "You were unable to navigate the debris field and crashed onto the Collector base."
+				}
+			}
+		}
+	]
+}

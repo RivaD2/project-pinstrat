@@ -40,14 +40,23 @@ TODO:
 
     - `npm init -y `
     - **The entry point for this app is: `index.js`**
-    - `npm install` for the following:
-        - `egoroof-blowfish`
-        - `dotenv`
-        - `cors`
-        - `express`
-        - 'jest'
-        - cli-spinner
-        - chalk
+    - `npm i` for the following:
+       
+        "@code-fellows/supergoose": "^1.0.11",
+        "chalk": "^4.1.0",
+        "cli-spinner": "^0.2.10",
+        "cors": "^2.8.5",
+        "crypto": "^1.0.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "jest": "^26.6.3",
+        "mongodb": "^3.6.3",
+        "mongoose": "^5.10.13",
+        "node-mocks-http": "^1.9.0",
+        "nodemon": "^2.0.6",
+        "superagent": "^6.1.0",
+        "supertest": "^6.0.1"
+
 - Install MongoDB: `npm install mongodb`
 - Install mongoose: `npm install -save--dev mongoose`
 - Visit [docs.mongodb.com](https://docs.mongodb.com/manual/tutorial/getting-started/) to learn How to get started using MongoDB.
@@ -82,7 +91,6 @@ mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true, useUnifiedTopolo
 PORT=3001
 MONGODB_URI=(add db URI here)
 
-
 ```
 
 
@@ -92,7 +100,29 @@ MONGODB_URI=(add db URI here)
 
 ### Testing:
 
-TODO
+ PASS  __tests__/debug-logger.test.js
+ 
+ - ✓ Debugger logger testing (3 ms)
+
+ PASS  __tests__/500.test.js
+  We are testing our 500 error message
+  -  ✓ Checking the specs of the error 500 page (1 ms)
+
+ PASS  __tests__/server.test.js
+  We can test our server.js paths and connections
+  -  ✓ Server.js is able to communicate to our Mongo DB (2 ms)
+  -  ✓ We will get a 404 error if we do not follow a set path (14 ms)
+  -  ✓ Testing 500 error if we have no arguments
+
+ PASS  __tests__/404.test.js
+  We are testing our 404 error message
+  -  ✓ should go to 404 page (2 ms)
+
+ PASS  __tests__/index.test.js
+  We can connect to Mongo DB at index.js
+  -  ✓ We can test our connection to Mongo DB (3 ms)
+  -  ✓ We can close our connection to Mongose DB as needed. (2 ms)
+
 
 ### Asset Attributions:
 
