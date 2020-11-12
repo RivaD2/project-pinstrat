@@ -1,21 +1,13 @@
 'use strict';
 
 const mongoose = require('mongoose');
-
+const logger = require('./lib/middleware/presentation-logger')
 const server = require('./lib/server');
-//commented this out as nodemon kept throwing errors it couldn't be found 
-//it doesn't look like we are using this as of now
-//const debugLogger = require('./lib/debug/debug-logger');
 
 server.start();
-// debugLogger(0),
-//Connect to Database
-mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
-    console.log(`Listening on MongoDB...`)
-    // debugLogger(1, 'Connected to MongoDB...')
+    logger(0)
   )
-  .catch(err => console.error('Could not connect to MongoDB...',err));
-
-//to gid rid of deprecation warning, I used mongoose.set
+  .catch(err => console.error('Could not connect to MongoDB...', err));
 mongoose.set('useCreateIndex', true);
