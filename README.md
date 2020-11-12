@@ -36,6 +36,11 @@ TODO:
 
 #### Usability
 
+After cloning the repo, you will need to add an .env file to hold your port number and mongodb URI connection string. You will want to do an npm install on the dependecies below ensuring that you are running nodemon in the console for the application. 
+
+This backend server is only compatible with Pinstrat's frontend site.
+
+
 **You will need to install the following on your machine:**
 
     - `npm init -y `
