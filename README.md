@@ -90,7 +90,8 @@ mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true, useUnifiedTopolo
 ```
 PORT=3001
 MONGODB_URI=(add db URI here)
-
+TEST_MONGODB_URI=
+MACHINE_ID_MD7=
 ```
 
 
