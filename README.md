@@ -4,9 +4,7 @@
 
 Riva Davidowski  ||   Kevin McNeil  ||   Robert Rizo
 
-### Client:
-
-TODO:
+### Client: Pinstrat
 
 ### About Project PinStrat:
 
