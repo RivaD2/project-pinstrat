@@ -12,6 +12,7 @@ class GameCollection {
         let newEntry = new this.model(object);
         return await newEntry.save();
     }
+
     async read(id) {
         //const oneEntry = await this.model.find({_id:new mongoose.Types.ObjectId(id)});
         const oneEntry = await this.model.find({ gameId: id });
@@ -42,5 +43,4 @@ class GameCollection {
         }
     }
 }
-
 module.exports = GameCollection;
