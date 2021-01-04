@@ -4,10 +4,6 @@
 
 Riva Davidowski  ||   Kevin McNeil  ||   Robert Rizo
 
-### Client:
-
-TODO:
-
 ### About Project PinStrat:
 
   For this project, we were lucky enough to have access to a client (another dev) who is developing a web application in need of a backend server. The client is Pinstrat, and Pinstrat is developing a way to deliver customized strategy guides for players of pinball and video games. 
@@ -36,7 +32,7 @@ TODO:
 
 #### Usability
 
-After cloning the repo, you will need to add an .env file to hold your port number and mongodb URI connection string. You will want to do an npm install on the dependecies below ensuring that you are running nodemon in the console for the application. 
+After cloning the repo, you will need to add an .env file to hold your port number and mongodb URI connection string. You will want to do an `npm i` to install dependencies below ensuring that you are running nodemon in the console for the application. 
 
 This backend server is only compatible with Pinstrat's frontend site.
 
@@ -68,7 +64,7 @@ This backend server is only compatible with Pinstrat's frontend site.
 
 - Start server:
 
-```
+```javascript
 
     /* give it a port number and optionally pass a function to call when app
      starts listening on given port*/
@@ -81,7 +77,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 - Connect to your db:
 
-```
+```javascript
 
 //Connect to Database
 mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true, useUnifiedTopology: true})
@@ -92,7 +88,7 @@ mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true, useUnifiedTopolo
 
 #### env Requirements:
 
-```
+```javascript
 PORT=3001
 MONGODB_URI=(add db URI here)
 TEST_MONGODB_URI=
